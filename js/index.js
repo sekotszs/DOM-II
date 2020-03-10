@@ -24,7 +24,6 @@ this.addEventListener("drag", event => {
     secondImage.setAttribute("src", "img/marla.jpg")
 })
 
-
 //CONTEXTMENU 6
 let dest = document.querySelectorAll("div.destination p");
 dest.forEach(element =>{
@@ -43,6 +42,13 @@ haColor.addEventListener("mouseup", event => event.target.style.color="blue")
 let bColor = document.querySelector("h4");
 bColor.addEventListener("click", event => event.target.style.color= "hotpink")
 
-//10
+//MOUSEOUT 10
 let logos = document.querySelector("h1.logo-heading");
 logos.addEventListener("mouseout",event => event.target.style.backgroundColor = "yellow")
+
+//NAV
+let navthing = document.querySelectorAll("a.nav-link");
+navthing.forEach(link => link.addEventListener("click", event =>{
+    event.stopPropagation()
+    event.preventDefault()
+}))
